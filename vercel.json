@@ -19,13 +19,25 @@
       ]
     },
     {
-      "source": "/(.*\\.js|.*\\.css|.*\\.map)",
+      "source": "/(.*\\.js)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
-      "source": "/(.*\\.(ico|png|jpg|jpeg|svg|webp|gif|ttf|woff|woff2))",
+      "source": "/(.*\\.css)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*\\.(ico|png|jpg|jpeg|svg|webp|gif))",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*\\.(ttf|woff|woff2))",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
