@@ -19,7 +19,7 @@
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build",
     "build:server": "vite build --config vite.config.server.ts",
-    "build:vercel": "vite build --mode production",
+    "build:vercel": "vite build --mode production --emptyOutDir",
     "start": "node dist/server/node-build.mjs",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
