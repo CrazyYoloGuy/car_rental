@@ -23,6 +23,9 @@ export default defineConfig({
     },
     target: 'es2015',
     minify: 'esbuild',
+    commonjsOptions: {
+      include: [/node_modules/],
+    },
   },
   plugins: [react()],
   resolve: {
@@ -33,6 +36,10 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],
+    exclude: ['@vercel/node'],
   },
   root: ".",
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
+  },
 });

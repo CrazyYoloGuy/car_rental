@@ -1,11 +1,11 @@
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "./client/components/ui/toaster";
 import { createRoot } from "react-dom/client";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster as Sonner } from "./client/components/ui/sonner";
+import { TooltipProvider } from "./client/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthProvider } from "@/contexts/AuthContext";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { AuthProvider } from "./client/contexts/AuthContext";
+import { ProtectedRoute } from "./client/components/ProtectedRoute";
 import Index from "./client/pages/Index";
 import Fleet from "./client/pages/Fleet";
 import Inquiries from "./client/pages/Inquiries";
